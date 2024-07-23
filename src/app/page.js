@@ -4,40 +4,14 @@ import Image from "next/image"
 export default function Home() {
 	const cards = [
 		{
-			title: "Card 1",
-			description: "Card 1 description",
-			image: "i.imgur.com/cFMFm2q.png",
+			title: "Instagram",
+			image: "https://bio-cards.vercel.app/img/place.png",
 			link: "https://www.instagram.com/wobblypictures",
 		},
 		{
-			title: "Card 2",
-			description: "Card 2 description",
-			image: "i.imgur.com/cFMFm2q.png",
-			link: "https://www.instagram.com/wobblypictures",
-		},
-		{
-			title: "Card 3",
-			description: "Card 3 description",
-			image: "i.imgur.com/cFMFm2q.png",
-			link: "https://www.instagram.com/wobblypictures",
-		},
-		{
-			title: "Card 4",
-			description: "Card 4 description",
-			image: "i.imgur.com/cFMFm2q.png",
-			link: "https://www.instagram.com/wobblypictures",
-		},
-		{
-			title: "Card 5",
-			description: "Card 5 description",
-			image: "i.imgur.com/cFMFm2q.png",
-			link: "https://www.instagram.com/wobblypictures",
-		},
-		{
-			title: "Card 6",
-			description: "Card 6 description",
-			image: "i.imgur.com/cFMFm2q.png",
-			link: "https://www.instagram.com/wobblypictures",
+			title: "Twitter",
+			image: "https://bio-cards.vercel.app/img/audi.png",
+			link: "https://www.x.com/wobblypictures",
 		},
 	]
 
@@ -46,9 +20,7 @@ export default function Home() {
 		<main className="flex w-screen min-h-screen items-center">
 			<div className="flex flex-wrap justify-center gap-4 my-auto lg:w-1/2 mx-auto">
 				{cards.map((card, index) => {
-					const link =
-						"https://api.memegen.link/images/custom.jpg?background=https%3A%2F%2Fi.imgur.com%2FcFMFm2q.png&style=" + overlay + "&scale=1"
-					const temp = "https://api.memegen.link/images/custom.jpg?background=https%3A%2F%2Fi.imgur.com%2FcFMFm2q.png"
+					const link = "https://api.memegen.link/images/custom.jpg?background=" + card.image + "&style=" + overlay + "&scale=1"
 
 					console.log(link)
 					return (
@@ -66,6 +38,7 @@ export default function Home() {
 									width={300}
 									height={300}
 								></img>
+								<h2 className="absolute top-28 left-[25px] rotate-90 text-xs pt-1 text-black">{card.title}</h2>
 							</div>
 						</a>
 					)
