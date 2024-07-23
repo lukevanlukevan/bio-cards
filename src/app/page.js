@@ -5,12 +5,12 @@ export default function Home() {
 	const cards = [
 		{
 			title: "Instagram",
-			image: "https://bio-cards.vercel.app/img/place.png",
+			image: "https://bio-cards.vercel.app/img/posts/place.png",
 			link: "https://www.instagram.com/wobblypictures",
 		},
 		{
 			title: "Twitter",
-			image: "https://bio-cards.vercel.app/img/audi.png",
+			image: "https://bio-cards.vercel.app/img/posts/audi.png",
 			link: "https://www.x.com/wobblypictures",
 		},
 	]
